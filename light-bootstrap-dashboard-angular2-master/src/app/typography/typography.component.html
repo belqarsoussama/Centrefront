@@ -1,0 +1,101 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Liste des formations disponibles </h4>
+                        <p class="category">La fonction de recherche sera bientôt accessible.</p>
+                    </div>
+                    <div *ngIf="!visible" class="content table-responsive table-full-width">
+                        <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="back()">
+                            Retourner aux formations
+                        </button>
+                        <table class="table table-hover table-striped">
+
+                            <thead class="bg-light">
+                            <tr>
+                                <th>Titre Séance</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Prix(dh)</th>
+                                <th>     </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let entry of data1">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img
+                                                [src]="entry.imgSrc"
+                                                class="rounded-circle"
+                                                alt=""
+                                                style="width: 45px; height: 45px"
+                                        />
+                                        <div class="ms-3">
+                                            <p class="fw-bold mb-1">{{ entry.name }}</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-muted mb-0">{{ entry.category }}</p>
+                                </td>
+                                <td>
+                                    <p class="text-muted mb-0">{{ entry.description }}</p>
+                                </td>
+                                <td>{{ entry.value }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="confirmReservation()">
+                                        Reserver
+                                    </button>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+
+                    <div *ngIf="visible" class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+
+                                                    <thead class="bg-light">
+                                                    <tr>
+
+                                                        <th>Type de formation</th>
+                                                        <th>description</th>
+                                                        <th>Prix(dh)</th>
+                                                        <th>     </th>
+                                                    </tr>
+                                                    </thead>
+                            <tbody>
+                            <tr  *ngFor="let entry of data">
+                                <td>
+                                    <div class="ms-3">
+                                        <p class="fw-bold mb-1">{{ entry.categorie }}</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="text-muted mb-0">{{ entry.description }}</p>
+                                </td>
+                                <td>{{ entry.valeur }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="seancelieer()">
+                                        Visiter
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                                                </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

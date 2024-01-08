@@ -1,0 +1,10 @@
+.custom-btn-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px; /* Espacement entre les boutons */
+}
+.custom-btn {
+    color: white; /* Couleur du texte */
+}
+@import 'bootstrap/dist/css/bootstrap.min.css';
