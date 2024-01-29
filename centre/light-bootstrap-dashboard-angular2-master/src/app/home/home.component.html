@@ -1,0 +1,36 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <lbd-chart
+                        [title]="'Statistique des étudiants'"
+                        [subtitle]="'durant cette année '"
+                        [chartClass]="'ct-perfect-fourth'"
+                        [chartType]="emailChartType"
+                        [chartData]="emailChartData"
+                        [legendItems]="emailChartLegendItems"
+                        [withHr]="true"
+                        [footerIconClass]="'fa fa-clock-o'"
+                        [footerText]="'Mise à jour 1 heure avant'">
+                </lbd-chart>
+            </div>
+
+
+            <div class="col-md-8">
+                <lbd-chart
+                        [title]="'2023 Séances'"
+                        [subtitle]="'tout séance faites'"
+                        [chartType]="activityChartType"
+                        [chartData]="activityChartData"
+                        [chartOptions]="activityChartOptions"
+                        [chartResponsive]="activityChartResponsive"
+                        [legendItems]="activityChartLegendItems"
+                        [withHr]="true"
+                        [footerIconClass]="'fa fa-check'"
+                        [footerText]="'Année productive'">
+                </lbd-chart>
+            </div>
+
+        </div>
+    </div>
+</div>
